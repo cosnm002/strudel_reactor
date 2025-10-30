@@ -105,8 +105,9 @@ samples({
 'gtr': 'gtr/0001_cleanC.wav',
 'moog': { 'g3': 'moog/005_Mighty%20Moog%20G3.wav' },
 }, 'github:tidalcycles/dirt-samples');
+
 //set cicle speed default 30
-setCpm(120)
+setCpm(120) //@setCpm
 
 d1: s("<bd ~ [cp hh] ~>").bank("AlesisHR16")
 d2: s("~ ~ hh ~").gain(5)
