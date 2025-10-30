@@ -7,7 +7,7 @@ import { initAudioOnFirstClick } from '@strudel/webaudio';
 import { transpiler } from '@strudel/transpiler';
 import { getAudioContext, webaudioOutput, registerSynthSounds } from '@strudel/webaudio';
 import { registerSoundfonts } from '@strudel/soundfonts';
-import { stranger_tune } from './tunes';
+import { stranger_tune, simple_tune } from './tunes';
 import console_monkey_patch, { getD3Data } from './console-monkey-patch';
 import DJControls from './components/DJControls';
 import PlayButtons from './components/PlayButtons';
@@ -25,15 +25,24 @@ export default function StrudelDemo() {
 
     const hasRun = useRef(false);
 
+    //Play button
     const handlePlay = () => {
         globalEditor.evaluate();
     }
 
+    //Stop button
     const handleStop = () => {
         globalEditor.stop();
     }
 
-    const [songText, setSongText] = useState(stranger_tune);
+    //Process and Play button
+    const procAndPlay = () => {
+        globalEditor.evaluate();
+
+    }
+
+    const [songText, setSongText] = useState(simple_tune);
+
 
     useEffect(() => {
 
@@ -68,7 +77,7 @@ export default function StrudelDemo() {
                 },
             });
 
-            document.getElementById('proc').value = stranger_tune
+            document.getElementById('proc').value = simple_tune
             //SetupButtons()
             //Proc()
         }
@@ -87,7 +96,7 @@ export default function StrudelDemo() {
                         <div className="col-md-4">
 
                             <nav>
-                                <ProcButtons />
+                                <ProcButtons onPlay={procAndPlay} />
                                 <br />
                                 <PlayButtons onPlay={handlePlay} onStop={handleStop} />
 

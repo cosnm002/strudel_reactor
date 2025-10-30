@@ -16,7 +16,7 @@ function DJControls() {
 
 
             <div className="row pt-2">
-                <span className="input-group-text" id="CpmLabel">setCMP (speed of all instruments)</span>
+                <span className="input-group-text" id="CpmLabel">setCPM (speed of all instruments)</span>
                 <input type="text" className="form-control" placeholder="120" ></input>
             </div>
 
