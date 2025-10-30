@@ -23,6 +23,8 @@ function DJControls({onType }) {
             <div className="row pt-2">
                 <label htmlFor="vRange" className="form-label">Volume</label>
                 <input type="range" className="form-range" min="0" max="1" step="0.1" id="vRange"></input>
+
+                
             </div>
 
 
@@ -46,5 +48,6 @@ function DJControls({onType }) {
         </>
     );
 }
+
 
 export default DJControls;

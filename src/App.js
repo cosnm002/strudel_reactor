@@ -56,7 +56,6 @@ export default function StrudelDemo() {
         const newText = songText.replace(regex, `${newLine} // @${id}`);
         //update the song 
         setSongText(newText)
-        console.log(songText);
     }
 
     //handle the change of cpm text box
