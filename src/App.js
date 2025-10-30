@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useRef, useState } from "react";
 import { StrudelMirror } from '@strudel/codemirror';
-import { evalScope } from '@strudel/core';
+import { evalScope, n, val } from '@strudel/core';
 import { drawPianoroll } from '@strudel/draw';
 import { initAudioOnFirstClick } from '@strudel/webaudio';
 import { transpiler } from '@strudel/transpiler';
@@ -42,6 +42,22 @@ export default function StrudelDemo() {
     }
 
     const [songText, setSongText] = useState(simple_tune);
+
+    //update a value in simple_tune using ID
+    function updateTuneById(id, newLine) {
+        //get the line with the corrosponding id
+        const regex = new RegExp(`.*// *@${id}`, 'g');
+        //make a new string with the change
+        const newText = songText.replace(regex, `${newLine} // @${id}`);
+        //update the song 
+        setSongText(newText)
+    }
+
+    //handle the change of cpm text box
+    const handleCpm = (e) => {
+        const value = e.target.value;
+        updateTuneById("setCpm", `setCpm(${value})`);
+    }
 
 
     useEffect(() => {
@@ -110,7 +126,7 @@ export default function StrudelDemo() {
                         </div>
 
                         <div className="col-md-4">
-                            <DJControls />
+                            <DJControls onType={handleCpm} />
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-function DJControls() {
+function DJControls({onType}) {
     return (
         <>
             <div className="form-check">
@@ -17,7 +17,8 @@ function DJControls() {
 
             <div className="row pt-2">
                 <span className="input-group-text" id="CpmLabel">setCPM (speed of all instruments)</span>
-                <input type="text" className="form-control" placeholder="120" ></input>
+                <input type="text" className="form-control" placeholder="" onChange={(e) => onType(e)} ></input>
+
             </div>
 
             <div className="row pt-2">
