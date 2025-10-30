@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useRef, useState } from "react";
 import { StrudelMirror } from '@strudel/codemirror';
-import { evalScope, n, val } from '@strudel/core';
+import { evalScope } from '@strudel/core';
 import { drawPianoroll } from '@strudel/draw';
 import { initAudioOnFirstClick } from '@strudel/webaudio';
 import { transpiler } from '@strudel/transpiler';
@@ -13,6 +13,7 @@ import DJControls from './components/DJControls';
 import PlayButtons from './components/PlayButtons';
 import ProcButtons from './components/ProcButtons';
 import PreprocessTextArea from './components/PreprocessTextArea';
+import { handlePlay, handleStop, procAndPlay } from './functions/PlayButtonsFunc';
 
 let globalEditor = null;
 
@@ -25,23 +26,17 @@ export default function StrudelDemo() {
 
     const hasRun = useRef(false);
 
-    //Play button
-    const handlePlay = () => {
-        globalEditor.evaluate();
-    }
-
-    //Stop button
-    const handleStop = () => {
-        globalEditor.stop();
-    }
-
-    //Process and Play button
-    const procAndPlay = () => {
-        globalEditor.evaluate();
-
-    }
+    
 
     const [songText, setSongText] = useState(simple_tune);
+
+
+    //importing the play buttons
+    <PlayButtons
+        onPlay={() => globalEditor.current && handlePlay(globalEditor)}
+        onStop={() => globalEditor.current && handleStop(globalEditor)}
+    ></PlayButtons>
+
 
     //update a value in simple_tune using ID
     function updateTuneById(id, newLine) {
@@ -58,6 +53,7 @@ export default function StrudelDemo() {
         const value = e.target.value;
         updateTuneById("setCpm", `setCpm(${value})`);
     }
+
 
 
     useEffect(() => {
@@ -112,7 +108,7 @@ export default function StrudelDemo() {
                         <div className="col-md-4">
 
                             <nav>
-                                <ProcButtons onPlay={procAndPlay} />
+                                <ProcButtons onPlay={handlePlay} />
                                 <br />
                                 <PlayButtons onPlay={handlePlay} onStop={handleStop} />
 
@@ -126,7 +122,7 @@ export default function StrudelDemo() {
                         </div>
 
                         <div className="col-md-4">
-                            <DJControls onType={handleCpm} />
+                            <DJControls />
                         </div>
                     </div>
                 </div>
