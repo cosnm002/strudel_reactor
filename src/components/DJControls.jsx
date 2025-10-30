@@ -21,23 +21,23 @@ function DJControls() {
             </div>
 
             <div className="row pt-2">
-                <label for="vRange" className="form-label">Volume</label>
+                <label htmlFor="vRange" className="form-label">Volume</label>
                 <input type="range" className="form-range" min="0" max="1" step="0.1" id="vRange"></input>
             </div>
 
 
             <div className="form-check">
-                <label className="form-check-label" for="drums">Drums</label>
+                <label className="form-check-label" htmlFor="drums">Drums</label>
                 <input className="form-check-input" type="checkbox" value="" id="drums" style={{ borderColor: 'black' }}></input>
             </div>
 
             <div className="form-check">
-                <label className="form-check-label" for="drums2">Drums 2</label>
+                <label className="form-check-label" htmlFor="drums2">Drums 2</label>
                 <input className="form-check-input" type="checkbox" value="" id="drums2" style={{ borderColor: 'black' }}></input>
             </div>
 
             <div className="form-check">
-                <label className="form-check-label" for="guitar">Guitar</label>
+                <label className="form-check-label" htmlFor="guitar">Guitar</label>
                 <input className="form-check-input" type="checkbox" value="" id="guitar" style={{ borderColor: 'black' } }></input>
             </div>
 
