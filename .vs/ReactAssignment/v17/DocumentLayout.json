@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\functions\\updatetune.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\functions\\updatetune.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\components\\djcontrols.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\djcontrols.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\components\\playbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\playbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\components\\procbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\components\\playbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\playbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,34 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 290,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateTune.js",
-              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\functions\\UpdateTune.js",
-              "RelativeDocumentMoniker": "src\\functions\\UpdateTune.js",
-              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\functions\\UpdateTune.js",
-              "RelativeToolTip": "src\\functions\\UpdateTune.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-31T01:52:52.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.js",
-              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\App.js",
-              "RelativeDocumentMoniker": "src\\App.js",
-              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\App.js",
-              "RelativeToolTip": "src\\App.js",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAwDwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-30T03:34:08.912Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
@@ -88,7 +62,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "UpdateTune.js",
+              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\functions\\UpdateTune.js",
+              "RelativeDocumentMoniker": "src\\functions\\UpdateTune.js",
+              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\functions\\UpdateTune.js",
+              "RelativeToolTip": "src\\functions\\UpdateTune.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-31T01:52:52.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.js",
+              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\App.js",
+              "RelativeDocumentMoniker": "src\\App.js",
+              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\App.js",
+              "RelativeToolTip": "src\\App.js",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-30T03:34:08.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ProcButtons.jsx",
               "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\ProcButtons.jsx",
               "RelativeDocumentMoniker": "src\\components\\ProcButtons.jsx",
@@ -96,12 +96,11 @@
               "RelativeToolTip": "src\\components\\ProcButtons.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAA+wAUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-10-30T06:31:00.585Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T06:31:00.585Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "PlayButtons.jsx",
               "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\PlayButtons.jsx",
               "RelativeDocumentMoniker": "src\\components\\PlayButtons.jsx",
@@ -114,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "index.js",
               "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\index.js",
               "RelativeDocumentMoniker": "src\\index.js",
@@ -122,12 +121,11 @@
               "RelativeToolTip": "src\\index.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-30T03:34:23.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T03:34:23.16Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PreprocessTextArea.jsx",
               "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\PreprocessTextArea.jsx",
               "RelativeDocumentMoniker": "src\\components\\PreprocessTextArea.jsx",
@@ -135,31 +133,30 @@
               "RelativeToolTip": "src\\components\\PreprocessTextArea.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-10-30T06:07:07.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T06:07:07.024Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DJControls.jsx",
               "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\DJControls.jsx",
               "RelativeDocumentMoniker": "src\\components\\DJControls.jsx",
               "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\DJControls.jsx",
               "RelativeToolTip": "src\\components\\DJControls.jsx",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAIAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwC0AAACqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-10-30T04:42:59.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "tunes.js",
               "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\tunes.js",
               "RelativeDocumentMoniker": "src\\tunes.js",
               "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\tunes.js",
               "RelativeToolTip": "src\\tunes.js",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAG4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHcAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-30T04:12:28.357Z",
               "EditorCaption": ""

@@ -116,7 +116,7 @@ d1: s("<bd ~ [cp hh] ~>").bank("AlesisHR16")
 d2: s("~ ~ hh ~").gain(5)
 
 
-
-s1: note("<g3 [bb3 c4] <g4 f4 eb4 f3>@2>").s("gtr,moog").clip(1) //@Guitar
+//@Guitar
+s1: note("<g3 [bb3 c4] <g4 f4 eb4 f3>@2>").s("gtr,moog").clip(1)
 .gain(.1).fast(2)
 `;

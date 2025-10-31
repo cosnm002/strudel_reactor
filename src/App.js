@@ -60,8 +60,9 @@ export default function StrudelDemo() {
         setSongText(newSong);
         globalEditor.evaluate();
     }
-    const handleInstrument = (e) => {
-        const newSong = muteInstrument(e);
+    const handleInstrument = (e, mute) => {
+        const newSong = muteInstrument(e, songText, mute);
+        setSongText(newSong);
     }
 
 
