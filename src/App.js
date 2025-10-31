@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { StrudelMirror } from '@strudel/codemirror';
 import { evalScope } from '@strudel/core';
 import { drawPianoroll } from '@strudel/draw';
@@ -7,7 +7,7 @@ import { initAudioOnFirstClick } from '@strudel/webaudio';
 import { transpiler } from '@strudel/transpiler';
 import { getAudioContext, webaudioOutput, registerSynthSounds } from '@strudel/webaudio';
 import { registerSoundfonts } from '@strudel/soundfonts';
-import { stranger_tune } from './tunes';
+import { stranger_tune, simple_tune } from './tunes';
 import console_monkey_patch, { getD3Data } from './console-monkey-patch';
 import DJControls from './components/DJControls';
 import PlayButtons from './components/PlayButtons';
@@ -20,54 +20,51 @@ const handleD3Data = (event) => {
     console.log(event.detail);
 };
 
-export function SetupButtons() {
-
-    document.getElementById('play').addEventListener('click', () => globalEditor.evaluate());
-    document.getElementById('stop').addEventListener('click', () => globalEditor.stop());
-    document.getElementById('process').addEventListener('click', () => {
-        Proc()
-    }
-    )
-    document.getElementById('process_play').addEventListener('click', () => {
-        if (globalEditor != null) {
-            Proc()
-            globalEditor.evaluate()
-        }
-    }
-    )
-}
-
-
-
-export function ProcAndPlay() {
-    if (globalEditor != null && globalEditor.repl.state.started == true) {
-        console.log(globalEditor)
-        Proc()
-        globalEditor.evaluate();
-    }
-}
-
-export function Proc() {
-
-    let proc_text = document.getElementById('proc').value
-    let proc_text_replaced = proc_text.replaceAll('<p1_Radio>', ProcessText);
-    ProcessText(proc_text);
-    globalEditor.setCode(proc_text_replaced)
-}
-
-export function ProcessText(match, ...args) {
-
-    let replace = ""
-    if (document.getElementById('flexRadioDefault2').checked) {
-        replace = "_"
-    }
-
-    return replace
-}
 
 export default function StrudelDemo() {
 
     const hasRun = useRef(false);
+
+    //Play button
+     const handlePlay = () => {
+        globalEditor.evaluate();
+    }
+
+    //Stop button
+    const handleStop = () => {
+        globalEditor.stop();
+    }
+
+    //Process and Play button
+    const procAndPlay = () => {
+        globalEditor.evaluate();
+
+    }
+    
+
+    const [songText, setSongText] = useState(simple_tune);
+
+
+
+
+
+    //update a value in simple_tune using ID
+    function updateTuneById(id, newLine) {
+        //get the line with the corrosponding id
+        const regex = new RegExp(`.*// *@${id}`, 'g');
+        //make a new string with the change
+        const newText = songText.replace(regex, `${newLine} // @${id}`);
+        //update the song 
+        setSongText(newText)
+    }
+
+    //handle the change of cpm text box
+    const handleCpm = (e) => {
+        const value = e.target.value;
+        updateTuneById("setCpm", `setCpm(${value})`);
+    }
+
+
 
     useEffect(() => {
 
@@ -102,12 +99,12 @@ export default function StrudelDemo() {
                 },
             });
 
-            document.getElementById('proc').value = stranger_tune
-            SetupButtons()
-            Proc()
+            document.getElementById('proc').value = simple_tune
+            //SetupButtons()
+            //Proc()
         }
-
-    }, []);
+        globalEditor.setCode(songText);
+    }, [songText]);
 
 
     return (
@@ -117,13 +114,13 @@ export default function StrudelDemo() {
 
                 <div className="container-fluid">
                     <div className="row">
-                        <PreprocessTextArea />
+                        <PreprocessTextArea defauleValue={songText} onChange={(e) => setSongText(e.target.value)} />
                         <div className="col-md-4">
 
                             <nav>
-                                <ProcButtons />
+                                <ProcButtons onPlay={procAndPlay} />
                                 <br />
-                                <PlayButtons />
+                                <PlayButtons onPlay={handlePlay} onStop={handleStop} />
 
                             </nav>
                         </div>
@@ -135,7 +132,7 @@ export default function StrudelDemo() {
                         </div>
 
                         <div className="col-md-4">
-                            <DJControls />
+                            <DJControls onType={handleCpm} />
                         </div>
                     </div>
                 </div>
