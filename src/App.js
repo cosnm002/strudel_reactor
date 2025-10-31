@@ -58,7 +58,7 @@ export default function StrudelDemo() {
         const value = e.target.value
         const newSong = updateTuneById("setVol", `all(x => x.gain(${value}))`, songText);
         setSongText(newSong);
-        globalEditor.evaluate();
+
     }
     const handleInstrument = (e, mute) => {
         const newSong = muteInstrument(e, songText, mute);
@@ -100,11 +100,11 @@ export default function StrudelDemo() {
                 },
             });
 
-            document.getElementById('proc').value = simple_tune
-            //SetupButtons()
-            //Proc()
+            document.getElementById('proc').value = songText
+            
         }
         globalEditor.setCode(songText);
+        globalEditor.evaluate();
     }, [songText]);
 
 
