@@ -1,4 +1,4 @@
-function DJControls({onType, onSlide }) {
+function DJControls({onType, onSlide, onClicks }) {
     return (
         <>
             <div className="form-check">
@@ -30,20 +30,20 @@ function DJControls({onType, onSlide }) {
                 
             </div>
 
-
+            
             <div className="form-check">
                 <label className="form-check-label" htmlFor="drums">Drums</label>
-                <input className="form-check-input" type="checkbox" value="" id="drums" style={{ borderColor: 'black' }}></input>
+                <input className="form-check-input" type="checkbox" value="" id="drums" style={{ borderColor: 'black' }} defaultChecked></input>
             </div>
 
             <div className="form-check">
                 <label className="form-check-label" htmlFor="drums2">Drums 2</label>
-                <input className="form-check-input" type="checkbox" value="" id="drums2" style={{ borderColor: 'black' }}></input>
+                <input className="form-check-input" type="checkbox" value="" id="drums2" style={{ borderColor: 'black' }} defaultChecked></input>
             </div>
 
             <div className="form-check">
                 <label className="form-check-label" htmlFor="guitar">Guitar</label>
-                <input className="form-check-input" type="checkbox" value="" id="guitar" style={{ borderColor: 'black' } }></input>
+                <input className="form-check-input" type="checkbox" value="" id="guitar" style={{ borderColor: 'black' }} defaultChecked onChange={(e) => onClicks("Guitar") }></input>
             </div>
 
 

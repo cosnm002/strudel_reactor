@@ -13,7 +13,7 @@ import DJControls from './components/DJControls';
 import PlayButtons from './components/PlayButtons';
 import ProcButtons from './components/ProcButtons';
 import PreprocessTextArea from './components/PreprocessTextArea';
-import { handleCpm, updateTuneById } from './functions/UpdateTune';
+import { handleCpm, updateTuneById, muteInstrument } from './functions/UpdateTune';
 
 let globalEditor = null;
 
@@ -59,6 +59,9 @@ export default function StrudelDemo() {
         const newSong = updateTuneById("setVol", `all(x => x.gain(${value}))`, songText);
         setSongText(newSong);
         globalEditor.evaluate();
+    }
+    const handleInstrument = (e) => {
+        const newSong = muteInstrument(e);
     }
 
 
@@ -140,7 +143,7 @@ export default function StrudelDemo() {
                         </div>
 
                         <div className="col-md-4">
-                            <DJControls onType={handleCpm} onSlide={handleVol} />
+                            <DJControls onType={handleCpm} onSlide={handleVol} onClicks={handleInstrument} />
                         </div>
                     </div>
                 </div>
