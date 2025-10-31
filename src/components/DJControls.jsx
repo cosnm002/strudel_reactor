@@ -1,4 +1,4 @@
-function DJControls({onType }) {
+function DJControls({onType, onSlide }) {
     return (
         <>
             <div className="form-check">
@@ -16,13 +16,16 @@ function DJControls({onType }) {
 
 
             <div className="row pt-2">
-                <span className="input-group-text" id="CpmLabel">setCPM (speed of all instruments)</span>
-                <input type="text" className="form-control" placeholder="120" onChange={(e) => onType(e)} ></input>
+            <div className="col-7">
+                    <span className="input-group-text" id="CpmLabel">setCPM (speed of all instruments)</span>
+                    <input type="text" className="form-control" id="cpmSet" placeholder="120" onChange={(e) => onType(e)} ></input>
+
+                </div>
             </div>
 
             <div className="row pt-2">
                 <label htmlFor="vRange" className="form-label">Volume</label>
-                <input type="range" className="form-range" min="0" max="1" step="0.1" id="vRange"></input>
+                <input type="range" className="form-range" min="0" max="1" step="0.1" id="vRange" onChange={(e) => onSlide(e) }></input>
 
                 
             </div>

@@ -106,6 +106,9 @@ samples({
 'moog': { 'g3': 'moog/005_Mighty%20Moog%20G3.wav' },
 }, 'github:tidalcycles/dirt-samples');
 
+//Master Volume
+all(x => x.gain(0.5)) //@setVol
+
 //set cicle speed default 30
 setCpm(120) //@setCpm
 
