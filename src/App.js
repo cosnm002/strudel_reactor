@@ -26,7 +26,7 @@ export default function StrudelDemo() {
     const hasRun = useRef(false);
 
     //Play button
-     const handlePlay = () => {
+    const handlePlay = () => {
         globalEditor.evaluate();
     }
 
@@ -40,7 +40,7 @@ export default function StrudelDemo() {
         globalEditor.evaluate();
 
     }
-    
+
 
     const [songText, setSongText] = useState(simple_tune);
 
@@ -48,13 +48,13 @@ export default function StrudelDemo() {
 
 
 
-    //update a value in simple_tune using ID
     function updateTuneById(id, newLine) {
+
         //get the line with the corrosponding id
         const regex = new RegExp(`.*// *@${id}`, 'g');
+
         //make a new string with the change
         const newText = songText.replace(regex, `${newLine} // @${id}`);
-        //update the song 
         setSongText(newText)
     }
 
@@ -114,7 +114,10 @@ export default function StrudelDemo() {
 
                 <div className="container-fluid">
                     <div className="row">
-                        <PreprocessTextArea defauleValue={songText} onChange={(e) => setSongText(e.target.value)} />
+                        <div className="col-3">
+                            <button className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#textArea" aria-expanded="false" aria-controls="textArea">Collapse Text Area</button>
+                        </div>
+                        <div className="col-5"></div>
                         <div className="col-md-4">
 
                             <nav>
@@ -124,6 +127,12 @@ export default function StrudelDemo() {
 
                             </nav>
                         </div>
+                        <div className="collapse collapse-horizontal" id="textArea">
+
+                            <PreprocessTextArea defauleValue={songText} onChange={(e) => setSongText(e.target.value)} />
+
+                        </div>
+
                     </div>
                     <div className="row">
                         <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
@@ -137,6 +146,7 @@ export default function StrudelDemo() {
                     </div>
                 </div>
                 <canvas id="roll"></canvas>
+
             </main >
         </div >
     );
