@@ -13,6 +13,7 @@ import DJControls from './components/DJControls';
 import PlayButtons from './components/PlayButtons';
 import ProcButtons from './components/ProcButtons';
 import PreprocessTextArea from './components/PreprocessTextArea';
+import { handleCpm, updateTuneById } from './functions/UpdateTune';
 
 let globalEditor = null;
 
@@ -46,23 +47,13 @@ export default function StrudelDemo() {
 
 
 
-
-
-    function updateTuneById(id, newLine) {
-
-        //get the line with the corrosponding id
-        const regex = new RegExp(`.*// *@${id}`, 'g');
-
-        //make a new string with the change
-        const newText = songText.replace(regex, `${newLine} // @${id}`);
-        setSongText(newText)
-    }
-
     //handle the change of cpm text box
     const handleCpm = (e) => {
         const value = e.target.value;
-        updateTuneById("setCpm", `setCpm(${value})`);
+        const newSong = updateTuneById("setCpm", `setCpm(${value})`, songText);
+        setSongText(newSong);
     }
+
 
 
 
@@ -109,13 +100,15 @@ export default function StrudelDemo() {
 
     return (
         <div>
-            <h2>Strudel Demo</h2>
+            <div class="row bg-black text-white p-3">
+                <h2>Strudel Demo</h2>
+            </div>
             <main>
 
                 <div className="container-fluid">
-                    <div className="row">
+                    <div className="row pt-5">
                         <div className="col-3">
-                            <button className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#textArea" aria-expanded="false" aria-controls="textArea">Collapse Text Area</button>
+                            <button className="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#textArea" aria-expanded="false" aria-controls="textArea">Edit Text &#129035;</button>
                         </div>
                         <div className="col-5"></div>
                         <div className="col-md-4">
