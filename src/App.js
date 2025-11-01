@@ -58,6 +58,8 @@ export default function StrudelDemo() {
         const value = e.target.value
         const newSong = updateTuneById("setVol", `all(x => x.gain(${value}))`, songText);
         setSongText(newSong);
+        globalEditor.setCode(newSong);
+        globalEditor.evaluate();
 
     }
     const handleInstrument = (e, mute) => {
@@ -104,7 +106,6 @@ export default function StrudelDemo() {
             
         }
         globalEditor.setCode(songText);
-        globalEditor.evaluate();
     }, [songText]);
 
 
@@ -144,11 +145,12 @@ export default function StrudelDemo() {
                         </div>
 
                         <div className="col-md-4">
-                            <DJControls onType={handleCpm} onSlide={handleVol} onClicks={handleInstrument} />
                         </div>
                     </div>
                 </div>
+                <DJControls onType={handleCpm} onSlide={handleVol} onClicks={handleInstrument} />
                 <canvas id="roll"></canvas>
+
 
             </main >
         </div >

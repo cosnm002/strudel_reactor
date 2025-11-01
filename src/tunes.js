@@ -101,10 +101,10 @@ stack(
 
 export const simple_tune = `samples('https://raw.githubusercontent.com/Mittans/tidal-drum-machines/main/machines/tidal-drum-machines.json')
 samples('https://raw.githubusercontent.com/tidalcycles/Dirt-Samples/master/strudel.json')
-samples({
-'gtr': 'gtr/0001_cleanC.wav',
-'moog': { 'g3': 'moog/005_Mighty%20Moog%20G3.wav' },
-}, 'github:tidalcycles/dirt-samples');
+samples({'gtr': 'gtr/0001_cleanC.wav','moog': { 'g3': 'moog/005_Mighty%20Moog%20G3.wav' },}, 'github:tidalcycles/dirt-samples');
+
+
+
 
 //Master Volume
 all(x => x.gain(0.5)) //@setVol
@@ -112,11 +112,15 @@ all(x => x.gain(0.5)) //@setVol
 //set cicle speed default 30
 setCpm(120) //@setCpm
 
+//@Drums
 d1: s("<bd ~ [cp hh] ~>").bank("AlesisHR16")
-d2: s("~ ~ hh ~").gain(5)
+
+//@Drums2
+d2: s("~ ~ hh ~")
+
 
 
 //@Guitar
 s1: note("<g3 [bb3 c4] <g4 f4 eb4 f3>@2>").s("gtr,moog").clip(1)
-.gain(.1).fast(2)
+.gain(.1).fast(1)
 `;
