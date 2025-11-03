@@ -4,7 +4,7 @@ function DJControls({ onType, onSlide, onClicks, onPlay }) {
     return (
         <>
 
-            <div className="container-fluid mt-3" style={{ backgroundColor: "rgb(62, 65, 70)" }}>
+            <div className="container-fluid mt-3 colour-container">
                 <div className="row bg-black text-white p-3">
                     <div className="col-4">
                         <h4>DJ Controls</h4>
