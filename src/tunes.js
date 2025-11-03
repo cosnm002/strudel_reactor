@@ -105,25 +105,36 @@ samples({'gtr': 'gtr/0001_cleanC.wav','moog': { 'g3': 'moog/005_Mighty%20Moog%20
 
 
 
+const d1Gain = 0.5 //@setD1Vol
+const d2Gain = 0.5 //@setD2Vol
+const g1Gain = 0.5 //@setG1Vol
 
-
-all(x => x.gain(0.5)) //@setVol
+const masterVol = 0.5 //@setVol
 
 
 setCpm(30) // @setCpm
 
 //@Drums
 d1: s("bd bd [bd bd bd] bd").bank("AlesisHR16")
+.gain(d1Gain * masterVol)
 .lpf("1000") //@D1.lpf
 
 
 //@Drums2
 d2: s("~ [hh cp]")
+.gain(d2Gain * masterVol)
+.lpf("20000") //@D2.lpf
 
 //@Guitar
 s1: note("<g3 g3 [bb3 c4] g3>").s("gtr,moog")
-   .gain(0.1)
+.gain(g1Gain * masterVol)
    .legato(0.2)
    .chop(8)
    .room(0.2)
+   .lpf("20000") //@G1.lpf
+
+
+
+
+
 `;

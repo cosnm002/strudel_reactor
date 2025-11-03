@@ -56,7 +56,7 @@ export default function StrudelDemo() {
 
     const handleVol = (e) => {
         const value = e.target.value
-        const newSong = updateTuneById("setVol", `all(x => x.gain(${value}))`, songText);
+        const newSong = updateTuneById("setVol", `const masterVol = ${value}`, songText);
         setSongText(newSong);
         globalEditor.setCode(newSong);
         globalEditor.evaluate();

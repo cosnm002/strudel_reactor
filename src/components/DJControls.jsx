@@ -54,12 +54,36 @@ function DJControls({ onType, onSlide, onClicks, onPlay }) {
 
                     </div>
                 </div>
-                <div className="row m-1">
+                <div className="row m-1 justify-content-between">
+
                     <div className="col-3 bg-secondary rounded mt-1 text-white">
-                        <label htmlFor="vRang3e" className="form-label">lpf</label>
-                        <input type="number" className="form-control" min="0" max="20000" step="100" id="vRang3e" onChange={(e) => onType("D1.lpf", ".lpf",e)}></input>
+
+                        <label htmlFor="d1Vol" className="form-label">Volume</label>
+                        <input type="range" className="form-range" min="0" max="1" step="0.1" id="d1Vol" onChange={(e) => onType("setD1Vol", "const d1Gain = ", e)}></input>
+
+                        <label htmlFor="D1.lpf" className="form-label">Low-Pass Filter</label>
+                        <input type="number" className="form-control" min="0" max="20000" step="100" id="D1.lpf" onChange={(e) => onType("D1.lpf", ".lpf",e)}></input>
 
                     </div>
+                    <div className="col-3 bg-secondary rounded mt-1 text-white">
+
+                        <label htmlFor="d2Vol" className="form-label">Volume</label>
+                        <input type="range" className="form-range" min="0" max="1" step="0.1" id="d2Vol" onChange={(e) => onType("setD2Vol", "const d2Gain = ", e)}></input>
+
+                        <label htmlFor="D2.lpf" className="form-label">Low-Pass Filter</label>
+                        <input type="number" className="form-control" min="0" max="20000" step="100" id="D2.lpf" onChange={(e) => onType("D2.lpf", ".lpf", e)}></input>
+
+                    </div>
+                    <div className="col-3 bg-secondary rounded mt-1 text-white">
+
+                        <label htmlFor="g1Vol" className="form-label">Volume</label>
+                        <input type="range" className="form-range" min="0" max="1" step="0.1" id="g1Vol" onChange={(e) => onType("setG1Vol", "const g1Gain = ", e)}></input>
+
+                        <label htmlFor="G1.lpf" className="form-label">Low-Pass Filter</label>
+                        <input type="number" className="form-control" min="0" max="20000" step="100" id="G1.lpf" onChange={(e) => onType("G1.lpf", ".lpf", e)}></input>
+
+                    </div>
+                    
                 </div>
             </div>
 
