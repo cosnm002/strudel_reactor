@@ -48,9 +48,9 @@ export default function StrudelDemo() {
 
 
     //handle the change of cpm text box
-    const handleCpm = (e) => {
+    const handleChange = (instrumentId, typeId, e) => {
         const value = e.target.value;
-        const newSong = updateTuneById("setCpm", `setCpm(${value})`, songText);
+        const newSong = updateTuneById(instrumentId, `${typeId}(${value})`, songText);
         setSongText(newSong);
     }
 
@@ -148,7 +148,7 @@ export default function StrudelDemo() {
                         </div>
                     </div>
                 </div>
-                <DJControls onType={handleCpm} onSlide={handleVol} onClicks={handleInstrument} />
+                <DJControls onType={handleChange} onSlide={handleVol} onClicks={handleInstrument} onPlay={handlePlay} />
                 <canvas id="roll"></canvas>
 
 

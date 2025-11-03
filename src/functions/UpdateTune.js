@@ -10,7 +10,6 @@ export function updateTuneById(id, newLine, songText) {
     const regex = new RegExp(`.*// *@${id}`, 'g');
     //make a new string with the change
     const newText = songText.replace(regex, `${newLine} // @${id}`);
-    console.log(newLine);
     return newText;
 }
 

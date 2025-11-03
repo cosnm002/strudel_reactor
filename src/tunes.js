@@ -106,21 +106,24 @@ samples({'gtr': 'gtr/0001_cleanC.wav','moog': { 'g3': 'moog/005_Mighty%20Moog%20
 
 
 
-//Master Volume
+
 all(x => x.gain(0.5)) //@setVol
 
-//set cicle speed default 30
-setCpm(120) //@setCpm
+
+setCpm(30) // @setCpm
 
 //@Drums
-d1: s("<bd ~ [cp hh] ~>").bank("AlesisHR16")
+d1: s("bd bd [bd bd bd] bd").bank("AlesisHR16")
+.lpf("1000") //@D1.lpf
+
 
 //@Drums2
-d2: s("~ ~ hh ~")
-
-
+d2: s("~ [hh cp]")
 
 //@Guitar
-s1: note("<g3 [bb3 c4] <g4 f4 eb4 f3>@2>").s("gtr,moog").clip(1)
-.gain(.1).fast(1)
+s1: note("<g3 g3 [bb3 c4] g3>").s("gtr,moog")
+   .gain(0.1)
+   .legato(0.2)
+   .chop(8)
+   .room(0.2)
 `;
