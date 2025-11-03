@@ -1,0 +1,11 @@
+.big-switch {
+    transform: scale(1.8);
+    margin-bottom: 0.5rem;
+}
+
+.switch-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 2.5rem;
+    letter-spacing: 0.1rem;
+}

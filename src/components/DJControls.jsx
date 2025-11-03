@@ -1,3 +1,5 @@
+import './DJControls.css'
+
 function DJControls({ onType, onSlide, onClicks, onPlay }) {
     return (
         <>
@@ -19,68 +21,81 @@ function DJControls({ onType, onSlide, onClicks, onPlay }) {
                         <input type="text" className="form-control" id="cpmSet" onChange={(e) => onType("setCpm", "setCpm",e)} ></input>
 
                     </div>
-                    <div className="col-5 bg-secondary text-white rounded">
-                        <label htmlFor="vRange" className="form-label">Volume</label>
+                    <div className="col-3 bg-secondary text-white rounded">
+                        <label htmlFor="vRange" className="form-label">Master Volume</label>
                         <input type="range" className="form-range" min="0" max="1" step="0.1" id="vRange" onChange={(e) => onSlide(e)}></input>
 
                     </div>
                 </div>
 
-                <div className="row p-1 justify-content-between bg-secondary text-white rounded m-1">
 
-                    <div className="form-check form-switch col-auto d-flex flex-column align-items-center">
-                        <div className="ps-5">
-                            <label className="form-check-label" htmlFor="drums">Drums</label>
-                            <input className="form-check-input" type="checkbox" value="" id="drums" defaultChecked onChange={(e) => onClicks("Drums", e.target.checked)} ></input>
+                {/* Instruments */}
+                <div className="row m-1 justify-content-between pb-3">
+
+                    {/*Drums 1 */}
+                    <div className="col-3 bg-secondary rounded mt-1 text-white pb-3 pt-2">
+
+                        {/*Switch Button*/}
+                        <div className="form-switch d-flex flex-column align-items-center">
+                            <input className="form-check-input big-switch" type="checkbox" value="" id="drums" defaultChecked onChange={(e) => onClicks("Drums", e.target.checked)}></input>
+                            <label className="form-check-label switch-label" htmlFor="drums">Drums</label>
                         </div>
 
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbBpJIraHaqlq7rC6YfyZSQeKObk4AFI1MNg&s" width="70" className="mt-2"></img>
-                    </div>
-
-                    <div className="form-check form-switch col-auto d-flex flex-column">
-                        <div className="ps-4">
-                            <label className="form-check-label" htmlFor="drums2">Drums 2</label>
-                            <input className="form-check-input" type="checkbox" value="" id="drums2" defaultChecked onChange={(e) => onClicks("Drums2", e.target.checked)}></input>
-                        </div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbBpJIraHaqlq7rC6YfyZSQeKObk4AFI1MNg&s" width="70" className="mt-2"></img>
-                    </div>
-
-                    <div className="form-check form-switch col-auto d-flex flex-column pe-5 me-5">
-                        <div className="ps-5">
-                            <label className="form-check-label" htmlFor="guitar">Guitar</label>
-                            <input className="form-check-input" type="checkbox" value="" id="guitar" defaultChecked onChange={(e) => onClicks("Guitar", e.target.checked)}></input>
-                        </div>
-                        <img src="https://t4.ftcdn.net/jpg/15/27/10/19/360_F_1527101957_Lu6OB6MSOHKjJFRbHqy2li0SjomLNHSr.jpg" style={{ width: "80px", height: "70px" }} className="mt-2 ms-2 ps-1"></img>
-
-                    </div>
-                </div>
-                <div className="row m-1 justify-content-between">
-
-                    <div className="col-3 bg-secondary rounded mt-1 text-white">
-
+                        {/*Volume Slider*/}
                         <label htmlFor="d1Vol" className="form-label">Volume</label>
                         <input type="range" className="form-range" min="0" max="1" step="0.1" id="d1Vol" onChange={(e) => onType("setD1Vol", "const d1Gain = ", e)}></input>
 
+                        {/*LPF Input*/}
                         <label htmlFor="D1.lpf" className="form-label">Low-Pass Filter</label>
-                        <input type="number" className="form-control" min="0" max="20000" step="100" id="D1.lpf" onChange={(e) => onType("D1.lpf", ".lpf",e)}></input>
+                        <input type="range" className="form-range" min="0" max="20000" step="100" id="D1.lpf" defaultValue="1000" onChange={(e) => onType("D1.lpf", ".lpf",e)}></input>
 
                     </div>
-                    <div className="col-3 bg-secondary rounded mt-1 text-white">
 
+                    {/*Drums 2 */}
+                    <div className="col-3 bg-secondary rounded mt-1 text-white pb-3 pt-2">
+
+                        {/*Switch Button*/}
+                        <div className="form-switch d-flex flex-column align-items-center">
+                            <input className="form-check-input big-switch" type="checkbox" value="" id="drums2" defaultChecked onChange={(e) => onClicks("Drums2", e.target.checked)}></input>
+                            <label className="form-check-label switch-label" htmlFor="drums2">Drums 2</label>
+                        </div>
+
+                        {/*Volume Slider*/}
                         <label htmlFor="d2Vol" className="form-label">Volume</label>
                         <input type="range" className="form-range" min="0" max="1" step="0.1" id="d2Vol" onChange={(e) => onType("setD2Vol", "const d2Gain = ", e)}></input>
 
+                        {/*LPF Input*/}
                         <label htmlFor="D2.lpf" className="form-label">Low-Pass Filter</label>
-                        <input type="number" className="form-control" min="0" max="20000" step="100" id="D2.lpf" onChange={(e) => onType("D2.lpf", ".lpf", e)}></input>
+                        <input type="range" className="form-range" min="0" max="20000" step="100" id="D2.lpf" defaultValue="20000" onChange={(e) => onType("D2.lpf", ".lpf", e)}></input>
 
                     </div>
-                    <div className="col-3 bg-secondary rounded mt-1 text-white">
 
+                    {/*Guitar 1 */}
+                    <div className="col-3 bg-secondary rounded mt-1 text-white pb-3 pt-2">
+
+                        {/*Switch Button*/}
+                        <div className="form-switch d-flex flex-column align-items-center">
+                            <input className="form-check-input big-switch" type="checkbox" value="" id="guitar" defaultChecked onChange={(e) => onClicks("Guitar", e.target.checked)}></input>
+                            <label className="form-check-label switch-label" htmlFor="guitar">Guitar</label>
+                        </div>
+
+                        {/*Volume Slider*/}
                         <label htmlFor="g1Vol" className="form-label">Volume</label>
                         <input type="range" className="form-range" min="0" max="1" step="0.1" id="g1Vol" onChange={(e) => onType("setG1Vol", "const g1Gain = ", e)}></input>
 
+                        {/*LPF Input*/}
                         <label htmlFor="G1.lpf" className="form-label">Low-Pass Filter</label>
-                        <input type="number" className="form-control" min="0" max="20000" step="100" id="G1.lpf" onChange={(e) => onType("G1.lpf", ".lpf", e)}></input>
+                        <input type="range" className="form-range" min="0" max="20000" step="100" id="G1.lpf" defaultValue="20000" onChange={(e) => onType("G1.lpf", ".lpf", e)}></input>
+
+
+                        {/* Legato Slider */}
+                        <label htmlFor="G1.leg" className="form-label">Legato (length of each note)</label>
+                        <input type="range" className="form-range" min="0" max="2" step="0.1" id="G1.leg" defaultValue="0.2" onChange={(e) => onType("G1.leg", ".legato", e)}></input>
+
+                        {/* Chop Slider */}
+                        <label htmlFor="G1.chop" className="form-label">Chop (number per note)</label>
+                        <input type="range" className="form-range" min="0" max="20" step="1" id="G1.chop" defaultValue="8" onChange={(e) => onType("G1.chop", ".chop", e)}></input>
+
 
                     </div>
                     

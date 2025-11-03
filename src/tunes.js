@@ -128,10 +128,9 @@ d2: s("~ [hh cp]")
 //@Guitar
 s1: note("<g3 g3 [bb3 c4] g3>").s("gtr,moog")
 .gain(g1Gain * masterVol)
-   .legato(0.2)
-   .chop(8)
-   .room(0.2)
-   .lpf("20000") //@G1.lpf
+.legato(0.2) //@G1.leg
+.chop(8) //@G1.chop
+.lpf("20000") //@G1.lpf
 
 
 
