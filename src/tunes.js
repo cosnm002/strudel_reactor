@@ -124,6 +124,7 @@ d1: s("bd bd [bd bd bd] bd").bank("AlesisHR16")
 d2: s("~ [hh cp]")
 .gain(d2Gain * masterVol)
 .lpf("20000") //@D2.lpf
+.cpm("30") //@D2.cpm
 
 //@Guitar
 s1: note("<g3 g3 [bb3 c4] g3>").s("gtr,moog")
