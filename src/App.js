@@ -14,6 +14,7 @@ import PlayButtons from './components/PlayButtons';
 import ProcButtons from './components/ProcButtons';
 import PreprocessTextArea from './components/PreprocessTextArea';
 import { handleCpm, updateTuneById, muteInstrument } from './functions/UpdateTune';
+import XYPad from './components/XYPad';
 
 let globalEditor = null;
 
@@ -66,6 +67,15 @@ export default function StrudelDemo() {
         const newSong = muteInstrument(e, songText, mute);
         setSongText(newSong);
     }
+    const handleXYChange = ({ x, y }) => {
+        // map X and Y (0–100) to your song parameters
+        const reverb = y / 100;
+        const pan = (x - 50) / 50; // -1 to 1 range
+        console.log("Reverb:", reverb, "Pan:", pan);
+        // call your music engine or Strudel param here
+    };
+
+
 
 
 
@@ -148,7 +158,9 @@ export default function StrudelDemo() {
                         </div>
                     </div>
                 </div>
-                <DJControls onType={handleChange} onSlide={handleVol} onClicks={handleInstrument} onPlay={handlePlay} />
+                <DJControls onType={handleChange} onSlide={handleVol} onClicks={handleInstrument} onPlay={handlePlay} onXYChange={handleXYChange} />
+
+
                 <canvas id="roll"></canvas>
 
 

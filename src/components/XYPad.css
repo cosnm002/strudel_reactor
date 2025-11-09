@@ -1,0 +1,17 @@
+.xy-pad {
+    width: 250px; /* fixed width */
+    height: 250px; /* fixed height */
+    border: 2px solid yellow;
+    position: relative;
+}
+
+.xy-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: blue;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}

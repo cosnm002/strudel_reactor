@@ -118,6 +118,7 @@ setCpm(30) // @setCpm
 d1: s("bd bd [bd bd bd] bd").bank("AlesisHR16")
 .gain(d1Gain * masterVol)
 .lpf("1000") //@D1.lpf
+.cpm("30") //@D1.cpm
 
 
 //@Drums2

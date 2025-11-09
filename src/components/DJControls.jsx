@@ -1,6 +1,7 @@
 import './DJControls.css'
+import XYPad from './XYPad.jsx';
 
-function DJControls({ onType, onSlide, onClicks, onPlay }) {
+function DJControls({ onType, onSlide, onClicks, onPlay, onXYChange }) {
     return (
         <>
 
@@ -21,6 +22,11 @@ function DJControls({ onType, onSlide, onClicks, onPlay }) {
                         <input type="text" className="form-control" id="cpmSet" onChange={(e) => onType("setCpm", "setCpm",e)} ></input>
 
                     </div>
+                    <div className="col-4 bg-secondary">
+                        <h3>Sound Space</h3>
+                        <XYPad onChange={(v) => console.log(v)} />
+                    </div>
+
                     <div className="col-3 bg-secondary text-white rounded">
                         <label htmlFor="vRange" className="form-label">Master Volume</label>
                         <input type="range" className="form-range" min="0" max="1" step="0.1" id="vRange" onChange={(e) => onSlide(e)}></input>
@@ -49,6 +55,9 @@ function DJControls({ onType, onSlide, onClicks, onPlay }) {
                         <label htmlFor="D1.lpf" className="form-label">Low-Pass Filter</label>
                         <input type="range" className="form-range" min="0" max="20000" step="100" id="D1.lpf" defaultValue="1000" onChange={(e) => onType("D1.lpf", ".lpf",e)}></input>
 
+                        {/*Set Speed*/}
+                        <label htmlFor="D1.cpm" className="form-label">Set Speed: </label>
+                        <input type="number" className="form-0-quantity" min="0" max="120" step="20" defaultValue="30" onChange={(e) => onType("D1.cpm", "cpm", e)}></input>
                     </div>
 
                     {/*Drums 2 */}
@@ -69,7 +78,7 @@ function DJControls({ onType, onSlide, onClicks, onPlay }) {
                         <input type="range" className="form-range" min="0" max="20000" step="100" id="D2.lpf" defaultValue="20000" onChange={(e) => onType("D2.lpf", ".lpf", e)}></input>
 
                         {/*Set Speed*/}
-                        <label htmlFor="D2.cpm" className="form-label">Set Speed</label>
+                        <label htmlFor="D2.cpm" className="form-label">Set Speed: </label>
                         <input type="number" className="form-0-quantity" min="0" max="120" step="20" defaultValue="30" onChange={(e) => onType("D2.cpm", "cpm", e)}></input>
 
                     </div>
@@ -105,6 +114,7 @@ function DJControls({ onType, onSlide, onClicks, onPlay }) {
                     
                 </div>
             </div>
+                                
 
 
 
