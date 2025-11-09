@@ -111,6 +111,15 @@ const g1Gain = 0.5 //@setG1Vol
 
 const masterVol = 0.5 //@setVol
 
+const allKeys = {
+    D: "<d3 d3 [f3 g3] d3>",
+    E: "<e3 e3 [g3 a3] e3>",
+    F: "<f3 f3 [ab3 bb3] f3>",
+    G: "<g3 g3 [bb3 c4] g3>",
+    A: "<a3 a3 [c4 d4] a3>",
+    B: "<b3 b3 [d#4 e4] b3>",
+    C: "<c4 c4 [f4 g4] c4>"
+}
 
 setCpm(30) // @setCpm
 
@@ -128,7 +137,7 @@ d2: s("~ [hh cp]")
 .cpm("30") //@D2.cpm
 
 //@Guitar
-s1: note("<g3 g3 [bb3 c4] g3>").s("gtr,moog")
+s1: note(allKeys.G).s("gtr,moog") //@setKey
 .gain(g1Gain * masterVol)
 .legato(0.2) //@G1.leg
 .chop(8) //@G1.chop

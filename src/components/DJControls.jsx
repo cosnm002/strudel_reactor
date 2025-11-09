@@ -1,7 +1,7 @@
 import './DJControls.css'
-import XYPad from './XYPad.jsx';
+import Dropdown from './Dropdown';
 
-function DJControls({ onType, onSlide, onClicks, onPlay, onXYChange }) {
+function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
     return (
         <>
 
@@ -19,13 +19,14 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onXYChange }) {
 
                     <div className="col-3 bg-secondary rounded text-white p-2 ">
                         <label className="form-label" htmlFor="cpmSet">setCPM (speed of all instruments)</label>
-                        <input type="text" className="form-control" id="cpmSet" onChange={(e) => onType("setCpm", "setCpm",e)} ></input>
+                        <input type="text" className="form-control" id="cpmSet" onChange={(e) => onType("setCpm", "setCpm", e)} ></input>
 
                     </div>
-                    <div className="col-4 bg-secondary">
-                        <h3>Sound Space</h3>
-                        <XYPad onChange={(v) => console.log(v)} />
+                    <div className="col-3 bg-secondary rounded text-white">
+                        <label className="form-label" htmlFor="setKey">Set Key</label>
+                        <Dropdown onChange={(e) => onDropChange(e) }></Dropdown>
                     </div>
+
 
                     <div className="col-3 bg-secondary text-white rounded">
                         <label htmlFor="vRange" className="form-label">Master Volume</label>
@@ -53,7 +54,7 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onXYChange }) {
 
                         {/*LPF Input*/}
                         <label htmlFor="D1.lpf" className="form-label">Low-Pass Filter</label>
-                        <input type="range" className="form-range" min="0" max="20000" step="100" id="D1.lpf" defaultValue="1000" onChange={(e) => onType("D1.lpf", ".lpf",e)}></input>
+                        <input type="range" className="form-range" min="0" max="20000" step="100" id="D1.lpf" defaultValue="1000" onChange={(e) => onType("D1.lpf", ".lpf", e)}></input>
 
                         {/*Set Speed*/}
                         <label htmlFor="D1.cpm" className="form-label">Set Speed: </label>
@@ -111,10 +112,10 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onXYChange }) {
 
 
                     </div>
-                    
+
                 </div>
             </div>
-                                
+
 
 
 
