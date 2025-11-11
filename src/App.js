@@ -8,18 +8,22 @@ import { transpiler } from '@strudel/transpiler';
 import { getAudioContext, webaudioOutput, registerSynthSounds } from '@strudel/webaudio';
 import { registerSoundfonts } from '@strudel/soundfonts';
 import { stranger_tune, simple_tune } from './tunes';
-import console_monkey_patch, { getD3Data } from './console-monkey-patch';
+import console_monkey_patch, { getD3Data, subscribe } from './console-monkey-patch';
 import DJControls from './components/DJControls';
 import PlayButtons from './components/PlayButtons';
 import ProcButtons from './components/ProcButtons';
 import PreprocessTextArea from './components/PreprocessTextArea';
-import { handleCpm, updateTuneById, muteInstrument } from './functions/UpdateTune';
+import { updateTuneById, muteInstrument } from './functions/UpdateTune';
+import D3Graph from './components/D3Graph';
+
+
 
 let globalEditor = null;
 
-const handleD3Data = (event) => {
-    console.log(event.detail);
-};
+
+
+
+
 
 
 export default function StrudelDemo() {
@@ -86,7 +90,7 @@ export default function StrudelDemo() {
     useEffect(() => {
 
         if (!hasRun.current) {
-            document.addEventListener("d3Data", handleD3Data);
+            //document.addEventListener("d3Data", handleD3Data);
             console_monkey_patch();
             hasRun.current = true;
             //Code copied from example: https://codeberg.org/uzu/strudel/src/branch/main/examples/codemirror-repl
@@ -117,7 +121,7 @@ export default function StrudelDemo() {
             });
 
             document.getElementById('proc').value = songText
-            
+
         }
         globalEditor.setCode(songText);
     }, [songText]);
@@ -143,6 +147,7 @@ export default function StrudelDemo() {
                                 <PlayButtons onPlay={handlePlay} onStop={handleStop} />
 
                             </nav>
+                            <D3Graph></D3Graph>
                         </div>
                         <div className="collapse collapse-horizontal" id="textArea">
 

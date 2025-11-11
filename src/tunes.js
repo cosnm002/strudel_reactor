@@ -142,7 +142,7 @@ s1: note(allKeys.G).s("gtr,moog") //@setKey
 .legato(0.2) //@G1.leg
 .chop(8) //@G1.chop
 .lpf("20000") //@G1.lpf
-
+.log()
 
 
 
