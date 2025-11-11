@@ -147,7 +147,7 @@ export default function StrudelDemo() {
                                 <PlayButtons onPlay={handlePlay} onStop={handleStop} />
 
                             </nav>
-                            <D3Graph></D3Graph>
+                            
                         </div>
                         <div className="collapse collapse-horizontal" id="textArea">
 
@@ -157,12 +157,13 @@ export default function StrudelDemo() {
 
                     </div>
                     <div className="row">
-                        <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
+                        <div className="col-md-7" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
                             <div id="editor" />
                             <div id="output" />
                         </div>
 
-                        <div className="col-md-4">
+                        <div className="col-md-5">
+                            <D3Graph></D3Graph>
                         </div>
                     </div>
                 </div>

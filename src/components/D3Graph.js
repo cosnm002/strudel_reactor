@@ -9,10 +9,10 @@ export default function D3Graph() {
     const [numberNote, setNumberNote] = useState(0);
     const [numberNoteArray, setNumberNoteArray] = useState([]);
 
-    const maxItems = 30;
-    const maxValue = 20;
+    const maxItems = 50;
+    const maxValue = 15;
 
-    const noteMap = ["d3", "f3", "g3", "e3", "a3", "ab3", "bb3", "bb3", "c4","b3", "d#4", "e4", "f4", "g4"]
+    const noteMap = ["d3", "f3", "g3", "e3", "a3", "ab3", "bb3", "bb3", "c4", "d4", "b3", "d#4", "e4", "f4", "g4"]
 
 
 
@@ -70,14 +70,14 @@ export default function D3Graph() {
         svg.selectAll("*").remove();
 
         let w = svg.node().getBoundingClientRect().width;
-        w = w - 10; //change this to space out each value
-
+        w = w - 1; //change this to space out each value
+        const barMargin = 10;
+        const barWidth = 2;
 
         let h = svg.node().getBoundingClientRect().height;
-        h = h - 25;
+        h = h - barMargin;
 
-        const barMargin = 10;
-        const barWidth = 1;
+
 
         let yScale = d3.scaleLinear()
             .domain([0, maxValue])
@@ -122,7 +122,7 @@ export default function D3Graph() {
             .append('path')
             .datum(numberNoteArray)
             .attr('fill', 'none')
-            //.attr('stroke', colourScale(numberNoteArray[numberNoteArray.length - 1]))
+            .attr('stroke', 'black')
             .attr('stroke-width', 4)
             .attr('d', d3.line()
                 .x((d, i) => i * barWidth)
@@ -164,10 +164,10 @@ export default function D3Graph() {
         <div className="App container">
 
             <h1>
-                Note Output: {note}
+                Guitar Output: Note - {note}
             </h1>
             <div className="row">
-                <svg width="100%" height="600px" class="border border-primary rounded p-2"></svg>
+                <svg width="100%" height="380px" class="border border-primary rounded p-2"></svg>
 
             </div>
         </div>
