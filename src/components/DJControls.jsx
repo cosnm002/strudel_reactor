@@ -58,7 +58,7 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
 
                         {/*Set Speed*/}
                         <label htmlFor="D1.cpm" className="form-label">Set Speed: </label>
-                        <input type="number" className="form-0-quantity" min="0" max="120" step="20" defaultValue="30" onChange={(e) => onType("D1.cpm", "cpm", e)}></input>
+                        <input type="number" className="form-0-quantity" min="0" max="120" step="20" defaultValue="30" onChange={(e) => onType("D1.cpm", ".cpm", e)}></input>
                     </div>
 
                     {/*Drums 2 */}
@@ -80,7 +80,7 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
 
                         {/*Set Speed*/}
                         <label htmlFor="D2.cpm" className="form-label">Set Speed: </label>
-                        <input type="number" className="form-0-quantity" min="0" max="120" step="20" defaultValue="30" onChange={(e) => onType("D2.cpm", "cpm", e)}></input>
+                        <input type="number" className="form-0-quantity" min="0" max="120" step="20" defaultValue="30" onChange={(e) => onType("D2.cpm", ".cpm", e)}></input>
 
                     </div>
 

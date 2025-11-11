@@ -52,6 +52,9 @@ export default function StrudelDemo() {
         const value = e.target.value;
         const newSong = updateTuneById(instrumentId, `${typeId}(${value})`, songText);
         setSongText(newSong);
+        globalEditor.setCode(newSong);
+        globalEditor.evaluate();
+
     }
 
     const handleVol = (e) => {
@@ -65,11 +68,16 @@ export default function StrudelDemo() {
     const handleInstrument = (e, mute) => {
         const newSong = muteInstrument(e, songText, mute);
         setSongText(newSong);
+        globalEditor.setCode(newSong);
+        globalEditor.evaluate();
     }
 
     const handleKeyChange = (e) => {
         const newSong = updateTuneById("setKey", `s1: note(allKeys.${e}).s("gtr,moog")`, songText)
         setSongText(newSong);
+        globalEditor.setCode(newSong);
+        globalEditor.evaluate();
+
     }
 
 
@@ -131,8 +139,7 @@ export default function StrudelDemo() {
                         <div className="col-md-4">
 
                             <nav>
-                                <ProcButtons onPlay={procAndPlay} />
-                                <br />
+                                <ProcButtons onPlay={procAndPlay} ></ProcButtons>
                                 <PlayButtons onPlay={handlePlay} onStop={handleStop} />
 
                             </nav>
