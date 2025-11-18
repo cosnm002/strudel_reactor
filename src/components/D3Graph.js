@@ -11,6 +11,7 @@ export default function D3Graph() {
     const maxItems = 50;
     const maxValue = 15;
 
+    //noteMap - maps the notes into numbers using index
     const noteMap = ["d3", "e3", "f3", "g3", "ab3", "a3", "bb3", "b3", "c4", "d4", "d#4", "e4", "f4", "g4"]
 
 
@@ -22,6 +23,7 @@ export default function D3Graph() {
 
     useEffect(() => {
 
+        //find 'the note:' section to  map to an array
         const handleD3Data = (event) => {
             const logArray = event.detail;
             const notes = logArray.map(line => {

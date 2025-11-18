@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\components\\dropdown.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\dropdown.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\functions\\updatetune.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\functions\\updatetune.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\components\\d3graph.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\d3graph.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\components\\djcontrols.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\djcontrols.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\components\\djcontrols.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\djcontrols.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\functions\\updatetune.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\functions\\updatetune.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\jsonsettings\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\jsonsettings\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\costa\\onedrive\\documents\\01 - university\\2025\\semester 2\\webtech\\assignment 2\\strudel_reactor\\src\\components\\dropdown.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\dropdown.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,45 +44,6 @@
           "DockedWidth": 290,
           "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateTune.js",
-              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\functions\\UpdateTune.js",
-              "RelativeDocumentMoniker": "src\\functions\\UpdateTune.js",
-              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\functions\\UpdateTune.js",
-              "RelativeToolTip": "src\\functions\\UpdateTune.js",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-09T07:05:42.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dropdown.jsx",
-              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\Dropdown.jsx",
-              "RelativeDocumentMoniker": "src\\components\\Dropdown.jsx",
-              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\Dropdown.jsx",
-              "RelativeToolTip": "src\\components\\Dropdown.jsx",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBMAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-11-09T06:44:18.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.js",
-              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\App.js",
-              "RelativeDocumentMoniker": "src\\App.js",
-              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\App.js",
-              "RelativeToolTip": "src\\App.js",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAwEcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-30T03:34:08.912Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
@@ -89,30 +58,60 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "DJControls.css",
               "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\DJControls.css",
               "RelativeDocumentMoniker": "src\\components\\DJControls.css",
               "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\DJControls.css",
               "RelativeToolTip": "src\\components\\DJControls.css",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-09T05:46:16.622Z",
+              "WhenOpened": "2025-11-18T06:46:29.408Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "tunes.js",
+              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\tunes.js",
+              "RelativeDocumentMoniker": "src\\tunes.js",
+              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\tunes.js",
+              "RelativeToolTip": "src\\tunes.js",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-18T06:24:49.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "settings.json",
+              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\JSONSettings\\settings.json",
+              "RelativeDocumentMoniker": "src\\JSONSettings\\settings.json",
+              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\JSONSettings\\settings.json",
+              "RelativeToolTip": "src\\JSONSettings\\settings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-18T04:43:20.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "DJControls.jsx",
               "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\DJControls.jsx",
               "RelativeDocumentMoniker": "src\\components\\DJControls.jsx",
               "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\DJControls.jsx",
               "RelativeToolTip": "src\\components\\DJControls.jsx",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwAwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAwIoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-11-03T04:21:28.715Z",
               "EditorCaption": ""
@@ -120,14 +119,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "tunes.js",
-              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\tunes.js",
-              "RelativeDocumentMoniker": "src\\tunes.js",
-              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\tunes.js",
-              "RelativeToolTip": "src\\tunes.js",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAAHgAAAAUAAAAAAAAAA==",
+              "Title": "D3Graph.js",
+              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\D3Graph.js",
+              "RelativeDocumentMoniker": "src\\components\\D3Graph.js",
+              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\D3Graph.js",
+              "RelativeToolTip": "src\\components\\D3Graph.js",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-30T04:12:28.357Z",
+              "WhenOpened": "2025-11-11T02:08:04.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.js",
+              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\App.js",
+              "RelativeDocumentMoniker": "src\\App.js",
+              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\App.js",
+              "RelativeToolTip": "src\\App.js",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwEMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-30T03:34:08.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateTune.js",
+              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\functions\\UpdateTune.js",
+              "RelativeDocumentMoniker": "src\\functions\\UpdateTune.js",
+              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\functions\\UpdateTune.js",
+              "RelativeToolTip": "src\\functions\\UpdateTune.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-09T07:05:42.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dropdown.jsx",
+              "DocumentMoniker": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\Dropdown.jsx",
+              "RelativeDocumentMoniker": "src\\components\\Dropdown.jsx",
+              "ToolTip": "C:\\Users\\costa\\OneDrive\\Documents\\01 - University\\2025\\Semester 2\\WebTech\\Assignment 2\\strudel_reactor\\src\\components\\Dropdown.jsx",
+              "RelativeToolTip": "src\\components\\Dropdown.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-09T06:44:18.553Z",
               "EditorCaption": ""
             }
           ]

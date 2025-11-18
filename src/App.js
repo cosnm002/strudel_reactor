@@ -51,11 +51,15 @@ export default function StrudelDemo() {
 
 
 
-    //handle the change of cpm text box
+    //handle the change of DJControl settings
     const handleChange = (instrumentId, typeId, e) => {
         const value = e.target.value;
+
+        //Sets song text to previous song to safe guard simultanious calls
         setSongText(prevSongText => {
             const newSong = updateTuneById(instrumentId, `${typeId}(${value})`, prevSongText);
+
+            //for live updates
             globalEditor.setCode(newSong);
             globalEditor.evaluate();
             return newSong;
@@ -67,6 +71,8 @@ export default function StrudelDemo() {
     const handleVol = (e) => {
         const value = e.target.value
         const newSong = updateTuneById("setVol", `const masterVol = ${value}`, songText);
+
+
         setSongText(newSong);
         globalEditor.setCode(newSong);
         globalEditor.evaluate();
@@ -74,6 +80,7 @@ export default function StrudelDemo() {
     }
     const handleInstrument = (e, mute) => {
         const newSong = muteInstrument(e, songText, mute);
+
         setSongText(newSong);
         globalEditor.setCode(newSong);
         globalEditor.evaluate();
@@ -81,6 +88,7 @@ export default function StrudelDemo() {
 
     const handleKeyChange = (e) => {
         const newSong = updateTuneById("setKey", `s1: note(allKeys.${e}).s("gtr,moog")`, songText)
+
         setSongText(newSong);
         globalEditor.setCode(newSong);
         globalEditor.evaluate();
@@ -93,11 +101,8 @@ export default function StrudelDemo() {
     useEffect(() => {
 
         if (!hasRun.current) {
-            //document.addEventListener("d3Data", handleD3Data);
             console_monkey_patch();
             hasRun.current = true;
-            //Code copied from example: https://codeberg.org/uzu/strudel/src/branch/main/examples/codemirror-repl
-            //init canvas
             const canvas = document.getElementById('roll');
             canvas.width = canvas.width * 2;
             canvas.height = canvas.height * 2;
