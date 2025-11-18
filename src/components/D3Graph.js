@@ -25,7 +25,6 @@ export default function D3Graph() {
 
         const handleD3Data = (event) => {
             const logArray = event.detail;
-
             const notes = logArray.map(line => {
                 const match = line.match(/note:([a-g][b#]?\d)/);
                 if (match) {
@@ -112,7 +111,7 @@ export default function D3Graph() {
             .attr("id", "line-gradient")
             .attr("gradientUnits", "userSpaceOnUse")
             .attr("x1", 0)
-            .attr("y1", yScale(0))
+            .attr("y1", yScale(-10))
             .attr("x2", 0)
             .attr("y2", yScale(maxValue))
             .selectAll("stop")

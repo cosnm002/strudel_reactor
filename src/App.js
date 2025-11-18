@@ -54,10 +54,13 @@ export default function StrudelDemo() {
     //handle the change of cpm text box
     const handleChange = (instrumentId, typeId, e) => {
         const value = e.target.value;
-        const newSong = updateTuneById(instrumentId, `${typeId}(${value})`, songText);
-        setSongText(newSong);
-        globalEditor.setCode(newSong);
-        globalEditor.evaluate();
+        setSongText(prevSongText => {
+            const newSong = updateTuneById(instrumentId, `${typeId}(${value})`, prevSongText);
+            globalEditor.setCode(newSong);
+            globalEditor.evaluate();
+            return newSong;
+        });
+
 
     }
 

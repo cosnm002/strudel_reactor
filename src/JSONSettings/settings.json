@@ -1,6 +1,11 @@
 {
-  "setCpm": 30,
-  "setKey": "G",
-  "masterVol": 0.5
+  "d1Vol": 0.5,
+  "d1lpf": 1000,
+  "d2Vol": 0.5,
+  "d2lpf":20000,
+  "g1Vol": 0.5,
+  "g1lpf":20000,
+  "g1leg": 0.2,
+  "g1chop": 8
 
 }

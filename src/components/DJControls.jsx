@@ -1,27 +1,76 @@
 import './DJControls.css'
 import Dropdown from './Dropdown';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import jsonSettings from '../JSONSettings/settings.json';
+import { parse } from '@strudel/mini';
 
 function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
 
     const [inputs, setInputs] = useState(jsonSettings);
+    const [jsonString, setJsonString] = useState("");
 
     useEffect(() => {
-        console.log(inputs);
 
     }, [inputs]);
-    const saveInputs = () => {
+    //get all inputs to store settings
+    let d1Vol = document.getElementById("d1Vol");
+    let d1lpf = document.getElementById("D1.lpf");
+    let d2Vol = document.getElementById("d2Vol");
+    let d2lpf = document.getElementById("D2.lpf");
+    let g1Vol = document.getElementById("g1Vol");
+    let g1lpf = document.getElementById("G1.lpf");
+    let g1leg = document.getElementById("G1.leg");
+    let g1chop = document.getElementById("G1.chop");
 
-        const settings = {
-        masterVol: Number(document.getElementById("vRange").value),
-        setCpm: document.getElementById("cpmSet").value,
-        drums: document.getElementById("drums").checked,
-        d1Vol: document.getElementById("d1Vol").value
+    let saveInputs = () => {
+        let settings = {
+            d1Vol: Number(d1Vol.value),
+            d1lpf: Number(d1lpf.value),
+            d2Vol: Number(d2Vol.value),
+            d2lpf: Number(d2lpf.value),
+            g1Vol: Number(g1Vol.value),
+            g1lpf: Number(g1lpf.value),
+            g1leg: Number(g1leg.value),
+            g1chop: Number(g1chop.value)
 
         }
-        const jsonString = JSON.stringify(settings, null, 2);
-        console.log(jsonString);
+        setJsonString(JSON.stringify(settings, null, 2));
+
+
+    }
+    const loadInputs = () => {
+
+        const parsed = JSON.parse(jsonString);
+        setInputs(parsed);
+
+
+        //trigger D1 changes
+        d1Vol.value = parsed.d1Vol;
+        onType("setD1Vol", "const d1Gain = ", { target: d1Vol });
+
+        d1lpf.value = parsed.d1lpf;
+        onType("D1.lpf", ".lpf", { target: d1lpf });
+
+        //trigger D2 changes
+        d2Vol.value = parsed.d2Vol;
+        onType("setD2Vol", "const d2Gain = ", { target: d2Vol });
+
+        d2lpf.value = parsed.d2lpf;
+        onType("D2.lpf", ".lpf", { target: d2lpf });
+
+        //trigger Guitar Changes
+        g1Vol.value = parsed.g1Vol;
+        onType("setG1Vol", "const g1Gain = ", { target: g1Vol });
+
+        g1lpf.value = parsed.g1lpf;
+        onType("G1.lpf", ".lpf", { target: g1lpf });
+
+        g1leg.value = parsed.g1leg;
+        onType("G1.leg", ".legato", { target: g1leg });
+
+        g1chop.value = parsed.g1chop;
+        onType("G1.chop", ".chop", { target: g1chop });
+
 
     }
 
@@ -38,7 +87,7 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
                             <button className="btn btn-success" onClick={saveInputs}>Save</button>
                         </div>
                         <div className="p-1">
-                            <button className="btn btn-secondary">Load</button>
+                            <button className="btn btn-secondary" onClick={loadInputs}>Load</button>
                         </div>
                     </div>
                 </div>
@@ -78,7 +127,7 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
 
                         {/*Volume Slider*/}
                         <label htmlFor="d1Vol" className="form-label">Volume</label>
-                        <input type="range" className="form-range" min="0" max="1" step="0.1" id="d1Vol" onChange={(e) => onType("setD1Vol", "const d1Gain = ", e)}></input>
+                        <input type="range" className="form-range" ref={d1Vol} min="0" max="1" step="0.1" id="d1Vol" onChange={(e) => onType("setD1Vol", "const d1Gain = ", e)}></input>
 
                         {/*LPF Input*/}
                         <label htmlFor="D1.lpf" className="form-label">Low-Pass Filter</label>
