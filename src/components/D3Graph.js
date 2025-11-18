@@ -62,6 +62,8 @@ export default function D3Graph() {
 
     useEffect(() => {
 
+        //Used the same line graph from the practicals 
+
 
         const svg = d3.select('svg');
         svg.selectAll("*").remove();
