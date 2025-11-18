@@ -12,7 +12,7 @@ export default function D3Graph() {
     const maxItems = 50;
     const maxValue = 15;
 
-    const noteMap = ["d3", "f3", "g3", "e3", "a3", "ab3", "bb3", "bb3", "c4", "d4", "b3", "d#4", "e4", "f4", "g4"]
+    const noteMap = ["d3", "e3", "f3", "g3", "ab3", "a3", "bb3", "b3", "c4", "d4", "d#4", "e4", "f4", "g4"]
 
 
 
@@ -64,13 +64,12 @@ export default function D3Graph() {
 
     useEffect(() => {
 
-        console.log(numberNoteArray);
 
         const svg = d3.select('svg');
         svg.selectAll("*").remove();
 
         let w = svg.node().getBoundingClientRect().width;
-        w = w - 1; //change this to space out each value
+        w = w - 1;
         const barMargin = 10;
         const barWidth = 2;
 
@@ -90,30 +89,8 @@ export default function D3Graph() {
         let yAxis = d3.axisLeft(yScale);
         chartGroup.append('g')
             .classed('axis y', true)
+            .attr('transform', 'translate(0,-20)')
             .call(yAxis);
-
-        //Bar Graph
-        //let barGroups = chartGroup.selectAll()
-        //    .data(rngArray.map((d) => LogToNum(d)))
-
-        //let newBarGroups = barGroups.enter()
-        //    .append('g')
-        //    .attr('transform', (d, i) => {
-        //        return `translate(${i * barWidth}, ${yScale(d)})`
-        //    });
-
-        //newBarGroups
-        //    .append('rect')
-        //    .attr('x', 5)
-        //    .attr('height', d => h - yScale(d))
-        //    .attr('width', barWidth - barMargin)
-        //    .attr('y', 0)
-        //    .style('fill', (d, i) => `rgb(${(360 / maxValue * d + 1)},
-        //    ${ 360 - (360 / maxValue * d + 1) }, 60)`);
-
-
-        //COLOUR THE ENTIRE LINE GRAPH
-        //const colourScale = d3.scaleSequential(d3.interpolateRgb('Lime', 'Red')).domain([0, maxValue]);
 
 
       
@@ -130,33 +107,33 @@ export default function D3Graph() {
             )
 
         ////COLOUR GRADIENT THE LINE GRAPH
-        //chartGroup
-        //    .append("linearGradient")
-        //    .attr("id", "line-gradient")
-        //    .attr("gradientUnits", "userSpaceOnUse")
-        //    .attr("x1", 0)
-        //    .attr("y1", yScale(0))
-        //    .attr("x2", 0)
-        //    .attr("y2", yScale(maxValue))
-        //    .selectAll("stop")
-        //    .data([
-        //        { offset: "0%", color: "green" },
-        //        { offset: "100%", color: "red" }
-        //    ])
-        //    .enter().append("stop")
-        //    .attr("offset", function (d) { return d.offset; })
-        //    .attr("stop-color", function (d) { return d.color; });
+        chartGroup
+            .append("linearGradient")
+            .attr("id", "line-gradient")
+            .attr("gradientUnits", "userSpaceOnUse")
+            .attr("x1", 0)
+            .attr("y1", yScale(0))
+            .attr("x2", 0)
+            .attr("y2", yScale(maxValue))
+            .selectAll("stop")
+            .data([
+                { offset: "50%", color: "blue" },
+                { offset: "100%", color: "green" }
+            ])
+            .enter().append("stop")
+            .attr("offset", function (d) { return d.offset; })
+            .attr("stop-color", function (d) { return d.color; });
 
-        //chartGroup
-        //    .append('path')
-        //    .datum(numberNoteArray)
-        //    .attr('fill', 'none')
-        //    .attr('stroke', 'url(#line-gradient)')
-        //    .attr('stroke-width', 3)
-        //    .attr('d', d3.line()
-        //        .x((d, i) => i * barWidth)
-        //        .y((d) => yScale(d))
-        //    )
+        chartGroup
+            .append('path')
+            .datum(numberNoteArray)
+            .attr('fill', 'none')
+            .attr('stroke', 'url(#line-gradient)')
+            .attr('stroke-width', 3)
+            .attr('d', d3.line()
+                .x((d, i) => i * barWidth)
+                .y((d) => yScale(d))
+            )
 
     }, [numberNoteArray]);
 
@@ -167,21 +144,10 @@ export default function D3Graph() {
                 Guitar Output: Note - {note}
             </h1>
             <div className="row">
-                <svg width="100%" height="380px" class="border border-primary rounded p-2"></svg>
+                <svg width="100%" height="380px" className="border border-primary rounded p-2"></svg>
 
             </div>
         </div>
     );
 };
 
-function LogToNum(input) {
-    if (!input) { return 0 };
-    var stringArray = input.split(/(\s+)/);
-    for (const item of stringArray) {
-        if (item.startsWith('gain:')) {
-            let val = item.substring(5)
-            return Number(val)
-        }
-    }
-    return 0;
-}

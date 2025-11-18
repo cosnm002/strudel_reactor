@@ -1,7 +1,30 @@
 import './DJControls.css'
 import Dropdown from './Dropdown';
+import { useEffect, useState } from 'react';
+import jsonSettings from '../JSONSettings/settings.json';
 
 function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
+
+    const [inputs, setInputs] = useState(jsonSettings);
+
+    useEffect(() => {
+        console.log(inputs);
+
+    }, [inputs]);
+    const saveInputs = () => {
+
+        const settings = {
+        masterVol: Number(document.getElementById("vRange").value),
+        setCpm: document.getElementById("cpmSet").value,
+        drums: document.getElementById("drums").checked,
+        d1Vol: document.getElementById("d1Vol").value
+
+        }
+        const jsonString = JSON.stringify(settings, null, 2);
+        console.log(jsonString);
+
+    }
+
     return (
         <>
 
@@ -11,7 +34,12 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
                         <h4>DJ Controls</h4>
                     </div>
                     <div className="col-8 d-flex justify-content-end">
-                        <button className="btn btn-success" onClick={onPlay}>Submit</button>
+                        <div className="p-1">
+                            <button className="btn btn-success" onClick={saveInputs}>Save</button>
+                        </div>
+                        <div className="p-1">
+                            <button className="btn btn-secondary">Load</button>
+                        </div>
                     </div>
                 </div>
 
@@ -24,13 +52,13 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
                     </div>
                     <div className="col-3 bg-secondary rounded text-white">
                         <label className="form-label" htmlFor="setKey">Set Key</label>
-                        <Dropdown onChange={(e) => onDropChange(e) }></Dropdown>
+                        <Dropdown id="dropDown" onChange={(e) => onDropChange(e)}></Dropdown>
                     </div>
 
 
                     <div className="col-3 bg-secondary text-white rounded">
                         <label htmlFor="vRange" className="form-label">Master Volume</label>
-                        <input type="range" className="form-range" min="0" max="1" step="0.1" id="vRange" onChange={(e) => onSlide(e)}></input>
+                        <input type="range" className="form-range" min="0" max="1" step="0.1" defaultValue={inputs.masterVol} id="vRange" onChange={(e) => onSlide(e)}></input>
 
                     </div>
                 </div>
