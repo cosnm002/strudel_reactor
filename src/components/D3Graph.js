@@ -6,7 +6,6 @@ export default function D3Graph() {
 
     const [note, setNote] = useState(0);
     const [noteArray, setNoteArray] = useState([]);
-    const [numberNote, setNumberNote] = useState(0);
     const [numberNoteArray, setNumberNoteArray] = useState([]);
 
     const maxItems = 50;

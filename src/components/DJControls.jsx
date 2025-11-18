@@ -127,7 +127,7 @@ function DJControls({ onType, onSlide, onClicks, onPlay, onDropChange }) {
 
                         {/*Volume Slider*/}
                         <label htmlFor="d1Vol" className="form-label">Volume</label>
-                        <input type="range" className="form-range" ref={d1Vol} min="0" max="1" step="0.1" id="d1Vol" onChange={(e) => onType("setD1Vol", "const d1Gain = ", e)}></input>
+                        <input type="range" className="form-range" min="0" max="1" step="0.1" id="d1Vol" onChange={(e) => onType("setD1Vol", "const d1Gain = ", e)}></input>
 
                         {/*LPF Input*/}
                         <label htmlFor="D1.lpf" className="form-label">Low-Pass Filter</label>
